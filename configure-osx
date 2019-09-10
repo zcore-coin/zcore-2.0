@@ -1,0 +1,11 @@
+export LDFLAGS="-L/usr/local/opt/boost@1.57/lib"
+export CPPFLAGS="-I/usr/local/opt/boost@1.57/include"
+
+./configure LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/opt/boost@1.57/lib -L/usr/local/opt/berkeley-db@4/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/qt/lib" CPPFLAGS="-I/usr/local/opt/openssl/include -I/usr/local/opt/boost@1.57/include -I/usr/local/opt/berkeley-db@4/include -I/usr/local/opt/readline/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/qt/include" --with-qrencode=yes --with-gui=qt5
+
+#./configure LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/opt/boost@1.57/lib -L/usr/local/opt/berkeley-db@4/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/qt/lib" CPPFLAGS="-I/usr/local/opt/openssl/include -I/usr/local/opt/boost@1.57/include -I/usr/local/opt/berkeley-db@4/include -I/usr/local/opt/readline/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/qt/include" --disable-tests --with-gui=no
+
+# install_name_tool -change "libboost_thread.dylib" "/usr/local/Cellar/boost@1.57/1.57.0/lib/libboost_thread-mt.dylib" src/qt/zcore-qt
+# make deploy
+
+#Check if there is another DMG opened

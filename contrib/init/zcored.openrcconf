@@ -1,0 +1,26 @@
+# /etc/conf.d/zcored: config file for /etc/init.d/zcored
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/zcore/zcore.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/zcored"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/zcored.pid"
+
+# Where to write zcored data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/zcored"
+
+# User and group to own zcored process
+#BITCOIND_USER="zcore"
+#BITCOIND_GROUP="zcore"
+
+# Path to zcored executable
+#BITCOIND_BIN="/usr/bin/zcored"
+
+# Nice value to run zcored under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

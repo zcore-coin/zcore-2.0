@@ -1,0 +1,26 @@
+[Unit]
+Description=ZCore's distributed currency daemon
+After=network.target
+
+[Service]
+User=zcore
+Group=zcore
+
+Type=forking
+PIDFile=/var/lib/zcored/zcored.pid
+
+ExecStart=/usr/bin/zcored -daemon -pid=/var/lib/zcored/zcored.pid \
+          -conf=/etc/zcore/zcore.conf -datadir=/var/lib/zcored
+
+ExecStop=-/usr/bin/zcore-cli -conf=/etc/zcore/zcore.conf \
+         -datadir=/var/lib/zcored stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

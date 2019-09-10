@@ -1,0 +1,6 @@
+rm -rf autom4te.cache 
+rm -rf src/univalue/autom4te.cache
+rm -rf background.tiff@2x.png
+rm -rf background.tiff
+rm -rf background.tiff.png
+rm -rf ZCore-Qt.dmg
