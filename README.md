@@ -37,5 +37,19 @@ addnode=45.32.139.101:17293
 addnode=8.9.36.25:17293
 ```
 
+Staking
+======================
+Enable
+```
+# zcore.conf
+staking=1
+```
+
+Disable
+```
+# zcore.conf
+staking=0
+```
+
 <h3>Licence</h3>
 ZCore is released under the terms of the MIT license. See COPYING for more information or see https://opensource.org/licenses/MIT.
