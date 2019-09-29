@@ -234,7 +234,8 @@ am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/src/config/zcore-config.h.in \
 	$(top_srcdir)/src/test/buildenv.py.in COPYING INSTALL \
 	build-aux/compile build-aux/config.guess build-aux/config.sub \
-	build-aux/install-sh build-aux/ltmain.sh build-aux/missing
+	build-aux/depcomp build-aux/install-sh build-aux/ltmain.sh \
+	build-aux/missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -314,7 +315,7 @@ CLIENT_VERSION_BUILD = 0
 CLIENT_VERSION_IS_RELEASE = true
 CLIENT_VERSION_MAJOR = 2
 CLIENT_VERSION_MINOR = 0
-CLIENT_VERSION_REVISION = 0
+CLIENT_VERSION_REVISION = 1
 COMPARISON_TOOL_REORG_TESTS = 0
 COPYRIGHT_YEAR = 2019
 CPP = gcc -E
@@ -400,10 +401,10 @@ OTOOL64 = :
 PACKAGE = zcore
 PACKAGE_BUGREPORT = www.zcore.cash
 PACKAGE_NAME = ZCore
-PACKAGE_STRING = ZCore 2.0.0
+PACKAGE_STRING = ZCore 2.0.1
 PACKAGE_TARNAME = zcore
 PACKAGE_URL = 
-PACKAGE_VERSION = 2.0.0
+PACKAGE_VERSION = 2.0.1
 PATH_SEPARATOR = :
 PIC_FLAGS = -fPIC
 PIE_FLAGS = -fPIC
@@ -461,7 +462,7 @@ UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
 UNIVALUE_LIBS = univalue/libunivalue.la
 USE_QRCODE = 
 USE_UPNP = 
-VERSION = 2.0.0
+VERSION = 2.0.1
 WINDOWS_BITS = 
 WINDRES = 
 X11XCB_CFLAGS = 
