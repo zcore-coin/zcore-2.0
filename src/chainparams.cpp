@@ -172,12 +172,12 @@ public:
         //vSeeds.push_back(CDNSSeedData("seed4.zcore.foundation", "seed4.zcore.foundation"));
 
         // ZCore addresses start with 'z'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 142);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 0);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 142); // z
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 145); // 2
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 80);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0xB2)(0x47)(0x46).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0xB2)(0x43)(0x08).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x02)(0x40)(0x00).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
