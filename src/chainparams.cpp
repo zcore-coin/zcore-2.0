@@ -56,11 +56,13 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (0, uint256("695b79c8c234b45b2eeb4722f33373e471c9b686ff78efeb39da95f824a9f81b"))
     (5000, uint256("c5d5ef6903b40c642216814363a789cbd06f8132fac0b41a7dd0e10e6f002b56"))
-    (9000, uint256("89f9dae0eebb52b2b0a0b891d21e31f36d5a5dcf392b04b97b17465980913680"));
+    (9000, uint256("89f9dae0eebb52b2b0a0b891d21e31f36d5a5dcf392b04b97b17465980913680"))
+    (20000, uint256("9bab5e8d61edc14511fde8f73df844026dca35c761ee06c68b6e7bd3dd314789"))
+    (30000, uint256("254ed8dbecf44e0c985e79de0f6b81d45f77ed5ac9bbe0081f6c79f237cb2bb2"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1568679075, // * UNIX timestamp of last checkpoint block
-    19480,     // * total number of transactions between genesis and last checkpoint
+    1569953473, // * UNIX timestamp of last checkpoint block
+    64895,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -172,8 +174,8 @@ public:
         //vSeeds.push_back(CDNSSeedData("seed4.zcore.foundation", "seed4.zcore.foundation"));
 
         // ZCore addresses start with 'z'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 142); // z
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 145); // 2
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 142);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 145);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 80);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0xB2)(0x47)(0x46).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0xB2)(0x43)(0x08).convert_to_container<std::vector<unsigned char> >();
