@@ -2,7 +2,7 @@
 name: "zcore-raspberry-2.0.1"
 enable_cache: true
 suites:
-- "precise"
+- "trusty"
 architectures:
 - "amd64"
 packages:
