@@ -6,6 +6,7 @@ suites:
 architectures:
 - "amd64"
 packages:
+- "curl"
 - "g++-multilib"
 - "git-core"
 - "pkg-config"
@@ -15,6 +16,8 @@ packages:
 - "faketime"
 - "bsdmainutils"
 - "binutils-gold"
+- "ca-certificates"
+- "python"
 reference_datetime: "2017-01-01 00:00:00"
 remotes:
 - "url": "https://github.com/zcore-coin/zcore-2.0.git"
