@@ -32,7 +32,7 @@ script: |
   FAKETIME_PROGS="date ar ranlib nm strip"
 
   #tar --warning=no-timestamp -xzf raspberrypi-tools.tar.gz
-  tar --warning=no-timestamp xf gcc-linaro-4.9-2015.02-3-x86_64_arm-linux-gnueabihf.tar.xz
+  tar --warning=no-timestamp -xzf gcc-linaro-4.9-2015.02-3-x86_64_arm-linux-gnueabihf.tar.gz
   #export TOOLCHAIN_BIN=$(pwd)/raspberrypi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
   export TOOLCHAIN_BIN=$(pwd)/gcc-linaro-4.9-2015.02-3-x86_64_arm-linux-gnueabihf/bin
   export PATH=$PATH:$TOOLCHAIN_BIN
