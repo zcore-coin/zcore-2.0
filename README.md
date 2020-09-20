@@ -22,6 +22,14 @@ ZCore (ZCR) integration/staging repository
 
 <p align="center"><img src="https://zcore.cash/img/gitblocks.png" /></a></p>
 
+ZCore 2.0 Swap Burn
+======================
+https://explorer.zcore.network/address/zUmK5U8barMnP34BZqGXjYLxjnfnRrePPe
+
+ZCRT Swap Burn
+======================
+https://explorer.zcore.network/address/21XyrsZaosjrRmN8rQKy1pFSW9Zh7LrADjv
+
 Add nodes
 ======================
 ```
