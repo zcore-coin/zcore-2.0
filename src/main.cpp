@@ -1809,39 +1809,48 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-
+    int64_t nSubsidy;
     if (nHeight == 0) {
-        return COIN * 4900000;
+    nSubsidy = COIN * 4900000;
     } else if (nHeight < Params().LAST_POW_BLOCK() && nHeight >= 0) {
-        return COIN * 1;
+        nSubsidy = COIN * 1;
     } else if (nHeight <= Params().SubsidyHalvingBlock() && nHeight >= Params().LAST_POW_BLOCK()) {
-        return COIN * 6.5;
+        nSubsidy = COIN * 6.5;
+    } else if (nHeight > Params().SubsidyHalvingBlock() && nHeight >= Params().LAST_POW_BLOCK() && nHeight <= 589669) {
+        nSubsidy = COIN * 1.97;
     } else {
-        return COIN * 1.97;
+        nSubsidy = COIN * 6.5;
     }
+    return nSubsidy;
 }
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, bool isZZCRStake)
 {
+    int64_t nMNSubsidy;
     if(nHeight < Params().LAST_POW_BLOCK()){
-        return COIN * 0;
+        nMNSubsidy = COIN * 0;
+    } else if (nHeight < Params().SubsidyHalvingBlock() && nHeight >= Params().LAST_POW_BLOCK()){
+        nMNSubsidy = COIN * 5.5;
+    } else if (nHeight > Params().SubsidyHalvingBlock() && nHeight >= Params().LAST_POW_BLOCK() && nHeight <= 589669){
+        nMNSubsidy = COIN * 1.87;
+    } else{
+        nMNSubsidy = COIN * 5.5;
     }
-    else if(nHeight < Params().SubsidyHalvingBlock() && nHeight >= Params().LAST_POW_BLOCK()){
-        return COIN * 5.5;
-    }
-    else{
-        return COIN * 1.87;
-    }
+    return nMNSubsidy;
 }
 
 int64_t GetDevelopersPayment(int nHeight) {
+   int64_t nDFSubsidy;
    if (nHeight <  Params().LAST_POW_BLOCK()) {
-        return COIN * 0;
+        nDFSubsidy = COIN * 0;
     } else if (nHeight < Params().SubsidyHalvingBlock() && nHeight >= Params().LAST_POW_BLOCK()) {
-        return COIN * 0.5;
+        nDFSubsidy = COIN * 0.5;
+    } else if (nHeight > Params().SubsidyHalvingBlock() && nHeight >= Params().LAST_POW_BLOCK() && nHeight <= 589669) {
+        nDFSubsidy = COIN * 0.17;
     } else {
-        return COIN * 0.17;
+        nDFSubsidy = COIN * 0.5;
     }
+    return nDFSubsidy;
 }
 
 bool IsInitialBlockDownload()
