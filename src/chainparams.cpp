@@ -169,10 +169,10 @@ public:
         assert(hashGenesisBlock == uint256("0x695b79c8c234b45b2eeb4722f33373e471c9b686ff78efeb39da95f824a9f81b"));
         assert(genesis.hashMerkleRoot == uint256("0x10d626f17c09ea9aba957a3308a1752a7159aafb8e029502dbcf937ee9e14a23"));
 
-        //vSeeds.push_back(CDNSSeedData("seed1.zcore.foundation", "seed1.zcore.foundation"));
-        //vSeeds.push_back(CDNSSeedData("seed2.zcore.foundation", "seed2.zcore.foundation"));
-        //vSeeds.push_back(CDNSSeedData("seed3.zcore.foundation", "seed3.zcore.foundation"));
-        //vSeeds.push_back(CDNSSeedData("seed4.zcore.foundation", "seed4.zcore.foundation"));
+        vSeeds.push_back(CDNSSeedData("seed1.zcore.network", "seed1.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed2.zcore.network", "seed2.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed3.zcore.network", "seed3.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed4.zcore.network", "seed4.zcore.network"));
 
         // ZCore addresses start with 'z'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 142);
