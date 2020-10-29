@@ -86,6 +86,9 @@ bool fAlerts = DEFAULT_ALERTS;
 unsigned int nStakeMinAge = 2 * 60 * 60;
 int64_t nReserveBalance = 0;
 
+/** Old subversions **/
+std::string version_old;
+
 /** Fees smaller than this (in uzcr) are considered zero fee (for relaying and mining)
  * We are ~100 times smaller then bitcoin now (2015-06-23), set minRelayTxFee only 10 times higher
  * so it's still 10 times lower comparing to bitcoin.
@@ -5398,6 +5401,16 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         pfrom->addrLocal = addrMe;
         if (pfrom->fInbound && addrMe.IsRoutable()) {
             SeenLocal(addrMe);
+        }
+
+        if (pfrom->cleanSubVer == "/ZCore:2.0.0/" || pfrom->cleanSubVer == "/ZCore:2.0.1/")
+        {
+            version_old = "< 2.0.2.1";
+            // disconnect from peers older than this version
+            LogPrintf("peer=%d using obsolete version %s disconnecting\n", pfrom->id, pfrom->cleanSubVer);
+            pfrom->PushMessage("reject", strCommand, REJECT_OBSOLETE, strprintf("Version must be %s or greater", version_old));
+            pfrom->fDisconnect = true;
+            return false;
         }
 
         // Be shy and don't send version until we hear
