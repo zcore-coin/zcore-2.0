@@ -59,11 +59,20 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (9000, uint256("89f9dae0eebb52b2b0a0b891d21e31f36d5a5dcf392b04b97b17465980913680"))
     (20000, uint256("9bab5e8d61edc14511fde8f73df844026dca35c761ee06c68b6e7bd3dd314789"))
     (30000, uint256("254ed8dbecf44e0c985e79de0f6b81d45f77ed5ac9bbe0081f6c79f237cb2bb2"))
-    (578540,uint256("9fd51a2ea643d81d7d51bce9af1533d541a18c2cf311a17649e85c6d60b647c0"));
+    (100000, uint256("74af0bda9e6c0a01d9a489dbe214319872eb7f6fbab3e0f86937822ff81c2264"))
+    (200000, uint256("cf50c0a6fede1504ffdf3cd4b67923f088923aba3fe569783d57314da3db0f80"))
+    (300000, uint256("6b3999126c9283ca95a83ba45536f5407f43942036c908a69751969bf2dba15c"))
+    (400000, uint256("01d996a1d025bd9b7aea0b1470801b5e91e3551e5e48e25313946e1907008f00"))
+    (500000, uint256("d886cfeaab38868fd813425f12f821a516b946543e8280c09db74c859d4f9699"))
+    (550000, uint256("ccc54c0b128e8cc87f250fe8c8ee93e94bd2761ae624f6c8032cad4fdc588a35"))
+    (578540,uint256("9fd51a2ea643d81d7d51bce9af1533d541a18c2cf311a17649e85c6d60b647c0"))
+    (600000,uint256("88af7f2f5979e3a5f2193733e7a055de674c383e6d1561b570dd609b973cf05d"))
+    (628020,uint256("d4ed80f276f8a2f1e27f137b493614502fb38527ac17fd7dfe6ee77eff8b3214"));
+    
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1603227931, // * UNIX timestamp of last checkpoint block
-    64895,     // * total number of transactions between genesis and last checkpoint
+    1606235129, // * UNIX timestamp of last checkpoint block
+    1411683,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -173,6 +182,17 @@ public:
         vSeeds.push_back(CDNSSeedData("seed2.zcore.network", "seed2.zcore.network"));
         vSeeds.push_back(CDNSSeedData("seed3.zcore.network", "seed3.zcore.network"));
         vSeeds.push_back(CDNSSeedData("seed4.zcore.network", "seed4.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed5.zcore.network", "seed5.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed6.zcore.network", "seed6.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed7.zcore.network", "seed7.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed8.zcore.network", "seed8.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed9.zcore.network", "seed9.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed10.zcore.network", "seed10.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed11.zcore.network", "seed11.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed12.zcore.network", "seed12.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed13.zcore.network", "seed13.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed14.zcore.network", "seed14.zcore.network"));
+        vSeeds.push_back(CDNSSeedData("seed15.zcore.network", "seed15.zcore.network"));
 
         // ZCore addresses start with 'z'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 142);
