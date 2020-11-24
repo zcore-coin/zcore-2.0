@@ -66,9 +66,11 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (500000, uint256("d886cfeaab38868fd813425f12f821a516b946543e8280c09db74c859d4f9699"))
     (550000, uint256("ccc54c0b128e8cc87f250fe8c8ee93e94bd2761ae624f6c8032cad4fdc588a35"))
     (578540,uint256("9fd51a2ea643d81d7d51bce9af1533d541a18c2cf311a17649e85c6d60b647c0"))
+    (592219,uint256("7d949b774de37eebe117bdb5a147dde1e72cf01eae138107a41f25905550f5b7"))
+    (592220,uint256("881e9f48fe0f94c49acfb7a9b76e6c3e94be5c61fa2ba2647ff9c0b276397dab")) //!< Network split here
     (600000,uint256("88af7f2f5979e3a5f2193733e7a055de674c383e6d1561b570dd609b973cf05d"))
     (628020,uint256("d4ed80f276f8a2f1e27f137b493614502fb38527ac17fd7dfe6ee77eff8b3214"));
-    
+
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1606235129, // * UNIX timestamp of last checkpoint block
